@@ -14,15 +14,27 @@ pre_deploy:
 # Deployment commands
 deploy:
   tasks:
-    - /bin/cp -r images ${DEPLOYPATH}
-    - /bin/cp -r index.html ${DEPLOYPATH}
-    - /bin/cp -r Logo.jpg ${DEPLOYPATH}
-    - /bin/cp -r Gradient.jpg ${DEPLOYPATH}
-    - /bin/cp -r Mermaid1001.ttf ${DEPLOYPATH}
-    - /bin/cp -r Amazone\ Regular.otf ${DEPLOYPATH}
-    - /bin/cp -r script.js ${DEPLOYPATH}
-    - /bin/cp -r style.css ${DEPLOYPATH}
-    - /bin/cp -r tilt.js ${DEPLOYPATH}
+    - /bin/cp -r images ${DEPLOYPATH}/images
+    - /bin/cp -r images/Cars ${DEPLOYPATH}/images/Cars
+    - /bin/cp -r images/Clothing ${DEPLOYPATH}/images/Clothing
+    - /bin/cp -r images/Food ${DEPLOYPATH}/images/Food
+    - /bin/cp -r images/Household ${DEPLOYPATH}/images/Household
+    - /bin/cp -r images/Perfumes ${DEPLOYPATH}/images/Perfumes
+    - /bin/cp -r images/Toys ${DEPLOYPATH}/images/Toys
+    - /bin/cp -r car.png ${DEPLOYPATH}/car.png
+    - /bin/cp -r cleaning-products.png ${DEPLOYPATH}/cleaning-products.png
+    - /bin/cp -r clothes-rack.png ${DEPLOYPATH}/clothes-rack.png
+    - /bin/cp -r food.png ${DEPLOYPATH}/food.png
+    - /bin/cp -r perfume-bottle.png ${DEPLOYPATH}/perfume-bottle.png
+    - /bin/cp -r storage-box.png ${DEPLOYPATH}/storage-box.png
+    - /bin/cp -r Amazone\ Regular.otf ${DEPLOYPATH}/Amazone\ Regular.otf
+    - /bin/cp -r Gradient.jpg ${DEPLOYPATH}/Gradient.jpg
+    - /bin/cp -r index.html ${DEPLOYPATH}/index.html
+    - /bin/cp -r Logo.jpg ${DEPLOYPATH}/Logo.jpg
+    - /bin/cp -r Mermaid1001.ttf ${DEPLOYPATH}/Mermaid1001.ttf
+    - /bin/cp -r script.js ${DEPLOYPATH}/script.js
+    - /bin/cp -r style.css ${DEPLOYPATH}/style.css
+    - /bin/cp -r tilt.js ${DEPLOYPATH}/tilt.js
 
 # Post-deployment commands (optional)
 post_deploy:
