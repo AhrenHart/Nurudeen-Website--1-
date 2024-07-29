@@ -1,0 +1,35 @@
+---
+# .cpanel.yml configuration file
+
+# Deployment settings
+deployment:
+  tasks:
+    - export DEPLOYPATH=${HOME}/public_html
+
+# Pre-deployment commands (optional)
+pre_deploy:
+  tasks:
+    - echo "Starting deployment..."
+
+# Deployment commands
+deploy:
+  tasks:
+    - /bin/cp -r images ${DEPLOYPATH}
+    - /bin/cp -r index.html ${DEPLOYPATH}
+    - /bin/cp -r Logo.jpg ${DEPLOYPATH}
+    - /bin/cp -r Gradient.jpg ${DEPLOYPATH}
+    - /bin/cp -r Mermaid1001.ttf ${DEPLOYPATH}
+    - /bin/cp -r Amazone\ Regular.otf ${DEPLOYPATH}
+    - /bin/cp -r script.js ${DEPLOYPATH}
+    - /bin/cp -r style.css ${DEPLOYPATH}
+    - /bin/cp -r tilt.js ${DEPLOYPATH}
+
+# Post-deployment commands (optional)
+post_deploy:
+  tasks:
+    - echo "Deployment completed successfully."
+
+# Additional settings
+env:
+  variables:
+    - NODE_ENV=production
